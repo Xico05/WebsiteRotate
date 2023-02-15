@@ -1,0 +1,928 @@
+@import url('https://fonts.googleapis.com/css?family=Space Grotesk');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow: scroll;
+    width: 100%;
+    position: absolute;
+    overflow-x: hidden;
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
+    cursor: default;
+}
+
+body {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    display: inline-block;
+    scroll-behavior: smooth;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Manrope';
+    scroll-snap-type: y proximity;
+    scroll-padding: 10px;
+}
+
+.panel {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+h3 {
+    font-weight: 1000;
+    font-size: 1.3vw;
+}
+
+/*-----------------------------------------------------------------------Navbar-------------*/
+
+nav {
+    font-family: 'Space Grotesk';
+    width: 90vw;
+    position: fixed;
+    top: 15px;
+    display: inline-block;
+    transition: 2s;
+    z-index: 100;
+}
+
+.logo {
+    position: absolute;
+    /*left: 5vw;*/
+    top: 1vh;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    margin-left: auto;
+    text-align: right;
+    margin-top: 0.7vw;
+    padding-bottom: 25px;
+}
+
+.nav-links a {
+    color: #f1f1f1;
+    font-size: 2vh;
+    text-decoration: none;
+    /*padding-right: 5vw;*/
+}
+
+.nav-links br {
+    font-size: 200px;
+}
+
+/*-----------------------------------------------------------------------First Section-------------*/
+
+.maintext {
+    position: absolute;
+    text-decoration: none;
+    color: #f1f1f1;
+    top: 40vh;
+    left: 8vw;
+    padding: 0px;
+    margin: 0px;
+    font-weight: bolder;
+
+}
+
+.maintext h1 {
+    display: inline-block;
+    overflow: hidden;
+    font-size: 6vw;
+    padding: 0px;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.maintext h2 {
+    font-size: 1vw;
+    font-style: italic;
+    font-weight: 100;
+    padding: 0px;
+    margin-left: 30px;
+    margin-right: 20px;
+    font-weight: 100;
+
+}
+
+/*-----------------------------------------------------------------------Second Section-------------*/
+
+.about {
+    display: grid;
+    place-content: center;
+    width: 90vw;
+}
+
+.abouttxt {
+    left: 0px;
+    width: 50vw;
+    color: #f1f1f1;
+
+}
+
+.abouttxt h3 {
+    color: #f1f1f1;
+    bottom: 5vh;
+    left: -5vh;
+    position: relative;
+    font-family: 'Space Grotesk';
+
+}
+
+.abouttxt a {
+    font-size: 2vw;
+    transition-delay: 200ms;
+}
+
+/*-----------------------------------------------------------------------Third Section-------------*/
+.foryou {
+    color: #f1f1f1;
+    display: grid;
+    place-content: center;
+    width: 90vw;
+}
+
+.foryoutxt {
+    left: 0px;
+    width: 50vw;
+}
+
+.foryoutxt h3 {
+    color: #f1f1f1;
+    bottom: 5vh;
+    left: -5vh;
+    position: relative;
+    font-family: 'Space Grotesk';
+
+}
+
+.foryoutxt a {
+    font-size: 2vw;
+}
+
+/*-----------------------------------------------------------------------Services-------------*/
+
+.services {
+    place-content: center;
+    width: 90vw;
+    color: #f1f1f1;
+    display: grid;
+}
+
+.servicestitle {
+    display: flex;
+    position: relative;
+    top: -10vh;
+    left: -4.5vw;
+    font-family: 'Space Grotesk';
+}
+
+.servicestitle h3 {
+    font-size: 1.5vw;
+}
+
+.servicestxt {
+    font-family: 'Manrope';
+    width: 80vw;
+    padding-top: 2vh;
+    padding-bottom: 1.5vh;
+}
+
+.left-text {
+    float: left;
+    width: 20vw;
+}
+
+.name {
+    padding-top: 11px;
+    float: left;
+    font-size: 0.9vw;
+}
+
+.number {
+    float: left;
+    font-size: 5vw;
+    margin-right: 20px;
+    width: 7vw;
+    font-family: 'Arvo';
+}
+
+.number a {
+    font-style: italic;
+    margin-right: 5px;
+}
+
+.list {
+    top: 21%;
+    margin: 0px;
+    width: 50vw;
+    padding: 0px;
+    position: relative;
+    font-size: 1vw;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50% 50% 50%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". ."
+        ". ."
+        ". .";
+}
+
+.col1,
+.col2,
+.ser,
+.list {
+    width: 17vw;
+
+}
+
+
+.line {
+    transition-delay: 600ms;
+    height: 5px;
+    width: 60vw;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    display: flex;
+    flex: none;
+    justify-content: center;
+    margin-left: 9vw;
+
+}
+
+.space {
+    float: left;
+    height: 2vw;
+    width: 30vw;
+    justify-content: center;
+}
+
+/*-----------------------------------------------------------------------Projects-------------*/
+
+.projectstxt {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.titlep h3 {
+    bottom: 5vh;
+    left: -21vh;
+    position: relative;
+    font-family: 'Space Grotesk';
+    transition-delay: 600ms;
+    z-index: 200;
+    font-size: 1.5vw;
+    text-decoration: none;
+}
+
+.card {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    position: relative;
+    place-content: center;
+    font-family: 'Manrope';
+    width: 15vw;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 60vh;
+    display: inline-block;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    color: #f1f1f1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card1 {
+    background-image: url(images/maran.jpg);
+}
+
+.card2 {
+    background-image: url(images/bioboards.jpg);
+}
+
+.card3 {
+    background-image: url(images/kuruma.jpg);
+}
+
+.card4 {
+    background-image: url(images/ninho.jpg);
+}
+
+.frame {
+    display: inline-block;
+}
+
+.card:hover {
+    transform: translateY(-3vh);
+}
+
+.desc {
+    top: 88%;
+    position: absolute;
+    width: 90%;
+
+}
+
+.desc h4 {
+    bottom: 110%;
+    position: absolute;
+    left: 5%;
+}
+
+.desc p {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+     font-size: 0.8vw;
+}
+
+.col a {
+    text-decoration: none;
+}
+
+.more {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    bottom: 10px;
+    top: 90px;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Space Grotesk';
+    
+}
+
+.more a {
+    text-decoration: none;
+    color: #f1f1f1;
+    font-size: 2vw;
+    
+}
+
+/*-----------------------------------------------------------------------Contacts-------------*/
+.contact {
+    height: 100vh;
+    color: #f1f1f1;
+}
+
+.end {
+    background: rgb(0, 0, 0);
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    position: absolute;
+    bottom: 0px;
+    z-index: -9;
+    transition-delay: 15s;
+}
+
+.footertxtl {
+    display: ;
+    position: absolute;
+    place-content: center;
+    height: 70vh;
+    bottom: 0px;
+    width: 40vw;
+    left: 10vw;
+    right: 10vw;
+}
+
+.contact h3 {
+    position: relative;
+    font-size: 1.5vw;
+    top: 100px;
+    font-family: 'Space Grotesk';
+}
+
+.footertxtl h5 {
+    top: 15vh;
+    font-size: 6vw;
+    font-weight: 100;
+
+}
+
+.footertxtl a {
+    position: relative;
+    font-size: 2vw;
+    padding-top: 145vw;
+    font-weight: 100;
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+.footertxtr {
+    position: relative;
+    top: 28vh;
+    display: grid;
+    float: right;
+    width: 20vw;
+    right: 0px;
+}
+
+.footertxtr h5 {
+    font-size: 1vw;
+    font-family: 'Space Grotesk';
+    padding-bottom: 1vw;
+    font-weight: 100;
+}
+
+.footertxtr a {
+    font-size: 1.5vw;
+    padding-top: 0px;
+    text-decoration: none;
+    color: #f1f1f1;
+    display: flex;
+}
+
+.chain {
+    position: relative;
+    float: ;
+    left: 24vw;
+    width: 10vw;
+    top: 22vh;
+}
+
+/*-----------------------------------------------------------------------Background-------------*/
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    z-index: -11;
+}
+
+/*-----------------------------------------------------------------------Cursor-------------*/
+.cursor {
+        width: 1rem;
+        height: 1rem;
+        border: 2px solid #f1f1f1;
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        transition: all 0.05s ease-in-out;
+        transform-origin: 100% 100%;
+        filter: blur(1.5px);
+        z-index: 5000;
+        top: -20%;
+        background-color: #f1f1f1;
+        
+    }
+
+    .link-grow {
+        scale: 500%;
+
+        background-color: rgba(255, 255, 255, 0);
+        transition: all 0.05s ease-in-out;
+        filter: blur(1px);
+        transform: translate(30%, 30%);
+    }
+
+
+/*-----------------------------------------------------------------------ScrollBar-------------*/
+
+
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F0f7ee;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s;
+    transform: translateX(-100%);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0px);
+    transition: 1s;
+    transform: translateX(0);
+}
+
+.hide {
+    opacity: 0;
+    filter: blur(8px);
+    transition: all 1s;
+}
+
+.reveal {
+    opacity: 1;
+    transition: 1s;
+    filter: blur(0px);
+}
+
+.frame2 {
+    transition-delay: 200ms;
+}
+
+.frame3 {
+    transition-delay: 400ms;
+}
+
+.frame4 {
+    transition-delay: 600ms;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: #f1f1f1;
+    margin: 5px auto;
+    border-radius: 20px;
+    -webkit-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+    html {
+        width: 100vw;
+        overflow-x: hidden;
+
+    }
+
+    body {
+        width: 100vw;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0px;
+        border border-radius:
+    }
+
+    .nav-links {
+        padding-top: 50vh;
+        position: fixed;
+        left: -110%;
+        top: 10vh;
+        flex-direction: column;
+        width: 100vw;
+        background: rgba(255, 255, 255, 0.26);
+        backdrop-filter: blur(7.4px);
+        -webkit-backdrop-filter: blur(7.4px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        height: 100vh;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+
+    }
+
+    .nav-links.active {
+
+        left: 0;
+    }
+
+    .navbar a {
+        font-weight: 900;
+        margin: 2.5rem 0;
+        font-size: 7vw;
+        bottom: 0px;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        bottom: 20px;
+        position: fixed;
+        right: 30px;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+        transition-duration: 0s;
+        background-color: black;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        background-color: black;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-12px) rotate(-45deg);
+        background-color: black;
+    }
+
+
+    .maintext {
+        left: 0vw;
+    }
+
+
+    .maintext h1 {
+        font-size: 15vw;
+
+    }
+
+    .maintext h2 {
+        font-size: 3.5vw;
+        width: 50%;
+    }
+
+    .cursor {
+        display: none;
+    }
+
+    .titlep h3 {
+        font-size: 5vw;
+        bottom: 2vh;
+        left: 2vh;
+    }
+
+    .card {
+        margin-top: 10px;
+        width: 35vw;
+        height: 30vh;
+    }
+
+    .card1,
+    .card3 {
+        margin-left: 25px;
+    }
+
+    .col {
+        display: list-item;
+        place-content: center;
+        justify-content: center;
+        list-style-type: none;
+    }
+
+    .desc {
+        top: 80%;
+        width: 90%;
+
+    }
+
+    .desc h4 {
+        bottom: 110%;
+        position: absolute;
+        left: 5%;
+    }
+
+    .desc p {
+        left: 10%;
+        width: 100%;
+        font-size: 1.1vh;
+        right: 10%;
+    }
+
+    .more {
+        bottom: 15px;
+        top: 40px;
+    }
+
+    .more a {
+        text-decoration: none;
+        color: #f1f1f1;
+        font-size: 10vw;
+    }
+
+    .abouttxt {
+        left: 0px;
+        width: 90vw;
+        color: #f1f1f1;
+
+    }
+
+    .abouttxt h3 {
+        bottom: 5vh;
+        left: 0px;
+        font-size: 6vw;
+
+    }
+
+    .abouttxt a {
+        display: flex;
+        font-size: 9vw;
+        width: 80vw;
+        margin: 15px;
+
+    }
+
+    .foryoutxt {
+        left: 0px;
+        width: 90vw;
+        color: #f1f1f1;
+
+    }
+
+    .foryoutxt h3 {
+        bottom: 5vh;
+        left: 0px;
+        font-size: 6vw;
+
+    }
+
+    .foryoutxt a {
+        display: flex;
+        font-size: 9vw;
+        width: 80vw;
+        margin: 15px;
+    }
+
+    .contact h3 {
+        position: relative;
+        font-size: 5vw;
+    }
+
+    .footertxtl h5 {
+        top: 15vh;
+        font-size: 16vw;
+        font-weight: 100;
+
+    }
+
+    .footertxtl a {
+        font-size: 6vw;
+        font-weight: 100;
+        color: #f1f1f1;
+    }
+
+    .footertxtr {
+        top: 62vh;
+        position: relative;
+        display: grid;
+        float: none;
+        width: 40vw;
+        left: 5vw;
+    }
+
+    .footertxtr h5 {
+        font-size: 4vw;
+    }
+
+    .footertxtr a {
+        font-size: 5vw;
+    }
+
+    .chain {
+        position: relative;
+        float: none;
+        left: 50vw;
+        top: -6vh;
+        width: 30vw;
+    }
+
+
+
+    .services {
+        place-content: center;
+        width: 90vw;
+        color: #f1f1f1;
+        display: grid;
+    }
+
+    .servicestitle {
+        display: flex;
+        position: relative;
+        top: -10vh;
+        left: -4.5vw;
+    }
+
+    .servicestitle h3 {
+        font-size: 6vw;
+    }
+
+    .servicestxt {
+        font-family: 'Manrope';
+        width: 80vw;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .left-text {
+        float: none;
+        width: 80vw;
+    }
+
+    .name {
+        padding-top: 11px;
+        float: left;
+        font-size: 8vw;
+        /*margin-right: 46vw;*/
+    }
+
+    .number {
+        float: left;
+        font-size: 12vw;
+        margin-right: 50px;
+        width: 7vw;
+    }
+
+    .number a {
+        font-style: italic;
+        margin-right: 5px;
+    }
+
+    .list {
+        top: 9%;
+        margin: 0px;
+        left: 0px;
+        width: 90vw;
+        padding: 0px;
+        position: relative;
+        font-size: 14px;
+        ;
+        display: flex;
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: 30% 30% 30%;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            ". ."
+            ". ."
+            ". .";
+    }
+
+    .col1,
+    .col2,
+    .ser,
+    .list {
+        left: 0px;
+        width: 45vw;
+    }
+
+    .line {
+        transition-delay: 600ms;
+        height: 2px;
+        margin-top: 9vw;
+        margin-bottom: 4vw;
+        width: 60vw;
+        border-radius: 10px;
+        background-color: #f1f1f1;
+        display: flex;
+        flex: none;
+        justify-content: center;
+        margin-left: 9vw;
+
+    }
+    
+    .logo img {
+    height: 30px;
+}
+
+    .space {
+        float: none;
+        height: 15vw;
+        width: 80vw;
+    }
+
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="./background/index.a8f04b30.js" defer=""></script>
+
+
+<head>
+    <title>Mãos d'Aranha</title>
+    <link rel="icon" href="icon.svg">
+    <meta name="viewport" content="width=device-width,maximum-scale=1.0,initial-scale=1.0, user-scalable=no">
+    <div id="container"><canvas data-engine="three.js r149" width="100vw" height="100vh" style="display: block; width: 100vw; height: 100vh; touch-action: none;"></canvas></div>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.119.1/build/three.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.119.1/examples/js/controls/OrbitControls.js"></script>
+    <script defer src="scripts/anim.js"></script>
+    <link rel="stylesheet" href="indexstyle.css"/>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Space Grotesk');
+        @import url('https://fonts.googleapis.com/css?family=Raleway');
+        @import url('https://fonts.googleapis.com/css?family=Arvo');
+
+    </style>
+    <script src="./background/three.min.js"> 
+    </script>
+</head>
+
+<body data-target=".navbar" data-offset="70">
+
+    <div class="cursor"></div>
+    <nav class="navbar" id="navbar">
+        <a href="#sec1" >
+            <div class="logo">
+                <img src="logo.svg" alt="Logo">
+            </div>
+        </a>
+        <div class="nav-links">
+            <a href="#sec1">Home</a>
+            <br>
+            <a href="#sec2">Projects</a>
+            <br>
+            <a href="#sec4">About</a>
+            <br>
+            <a href="#sec5">Services</a>
+            <br>
+            <a href="#sec6">Contact Us!</a>
+        </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div> 
+    </nav>
+    <div class="wrapper">
+        <section id="sec1" class="panel home">
+            <div class="maintext hide">
+                <h1>Together, we <span id="words">create</span></h1>
+                <br>
+                <h2>A full-stack creative collective, determined to bring your ideas to life</h2>
+            </div>
+        </section>
+        <section id="sec2" class="panel projects">
+            <div class="projectstxt">
+                <div class="titlep hidden">
+                    <h3 href="projects.html">Projects</h3>
+                </div>
+                <div class="col">
+                    <div class="frame frame1 hidden">
+                        <a href="projects/maran/maran.html">
+                            <div class="card card1">
+                                <div class="desc">
+                                    <h4>Maran</h4>
+                                    <p>3D Rendering, Photography, Film Making, Motion Graphics</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="frame frame2 hidden">
+                        <a href="projects/bioboards/bioboards.html">
+                            <div class="card card2">
+                                <div class="desc">
+                                    <h4>Bio Boards</h4>
+                                    <p>Logo Design, Photography, 3D Rendering</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="frame frame3 hidden">
+                        <a href="projects/kuruma/kuruma.html">
+                            <div class="card card3">
+                                <div class="desc">
+                                    <h4>Kuruma</h4>
+                                    <p>Logo Design</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="frame frame4 hidden">
+                        <a href="bioboards.html">
+                            <div class="card card4">
+                                <div class="desc">
+                                    <h4>Ninho</h4>
+                                    <p>Logo Design</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="more hide">
+                    <a href="projects.html">View all</a>
+                    <a href="projects.html">+</a>
+                </div>
+            </div>
+        </section>
+        <section id="sec3" class="panel about">
+            <div class="abouttxt hidden">
+                <h3 class="hidden" style="float: left;">This is not a company...</h3>
+                <h3 class="hidden yet" style="float: right; transition-delay: 1500ms;">,yet</h3>
+                <a style="float: right">We’re a team of freelancers, specialized in several areas of the “multimedia spectrum”, working together to provide full-stack multimedia services and bring your visions to life!</a>
+            </div>
+        </section>
+        <section id="sec4" class="panel foryou">
+            <div class="foryoutxt hidden">
+                <h3 class="hidden">Elevate your brand</h3>
+                <a>Our goal is to help you build and establish your brand, promoting stunning visual creative collective
+                    inovative powerfull large audience integrated marketing strategy</a>
+            </div>
+        </section>
+        <section id="sec5" class="panel services">
+            <div class="servicestitle hidden">
+                <h3>Services</h3>
+            </div>
+            <div class="servicestxt">
+                <div class="left-text hidden">
+                    <div class="number"><a>0</a>1</div>
+                    <div class="name">Branding</div>
+                </div>
+                <div class="space"></div>
+                <div class="list hidden" style="margin: 0px;">
+                    <div class="col1">
+                        <div class="ser">Logo Design</div>
+                        <div class="ser">Brand Guidelines</div>
+                        <div class="ser">Business Card Design</div>
+                    </div>
+                    <div class="col2">
+                        <div class="ser">Social Media Templates</div>
+                        <div class="ser">Branded Presentations</div>
+                        <div class="ser">Brand Identity System</div>
+                    </div>
+                </div>
+            </div>
+            <div class="line hidden"></div>
+            <div class="servicestxt">
+                <div class="left-text hidden">
+                    <div class="number"><a>0</a>2</div>
+                    <div class="name">Visuals</div>
+                </div>
+                <div class="space"></div>
+                <div class="list hidden" style="margin: 0px;">
+                    <div class="col1">
+                        <div class="ser">Logo Design</div>
+                        <div class="ser">Brand Guidelines</div>
+                        <div class="ser">Business Card Design</div>
+                    </div>
+                    <div class="col2">
+                        <div class="ser">Social Media Templates</div>
+                        <div class="ser">Branded Presentations</div>
+                        <div class="ser">Brand Identity System</div>
+                    </div>
+                </div>
+            </div>
+            <div class="line hidden"></div>
+            <div class="servicestxt">
+                <div class="left-text hidden">
+                    <div class="number"><a>0</a>3</div>
+                    <div class="name">Web</div>
+                </div>
+                <div class="space"></div>
+                <div class="list hidden" style="margin: 0px;">
+                    <div class="col1">
+                        <div class="ser">Logo Design</div>
+                        <div class="ser">Brand Guidelines</div>
+                        <div class="ser">Business Card Design</div>
+                    </div>
+                    <div class="col2">
+                        <div class="ser">Social Media Templates</div>
+                        <div class="ser">Branded Presentations</div>
+                        <div class="ser">Brand Identity System</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sec6" class="panel contact">
+            <div class="footertitle">
+                <h3 class="hidden">Contact</h3>
+            </div>
+            <div class="footertxt">
+                <div class="footertxtl">
+                    <h5>Stay connected</h5>
+                    <br>
+                    <br>
+                    <a style="padding-top: 0px;" href="mailto: contact@maosdaranha.com">contact@maosdaranha.com</a>
+                </div>
+                <div class="footertxtr">
+                    <h5>Follow us</h5>
+                    <a href="https://www.instagram.com/maosdaranha">Instagram</a>
+                    <br>
+                    <a href="https://twitter.com/maosdaranha">Twitter</a>
+                    <br>
+                    <a href="https://www.behance.net/maosdaranha">Behance</a>
+                    <br>
+                    <a href="https://www.facebook.com/maosdaranha">Facebook</a>
+                    <br>
+                    <a href="https://www.youtube.com/@maosdaranha">Youtube</a>
+                </div> 
+            </div>
+            <div class="chain hide">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                    <path fill="#f1f1f1" d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813  l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0  l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219  c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0  C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0  c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125  c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0  l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594  C274.561,395.092,246.42,392.342,220.326,382.186z" />
+                </svg>
+            </div>
+            <div class="end hide" style="transition-delay: 1s, 1ms"></div>
+        </section> 
+    </div>
+    <script src="./scripts/scroll.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        var words = ["create","innovate","elevate","inspire","grow","thrive" ],
+        i = 0;
+        setInterval(function(){ $('#words').fadeOut(function(){
+            $(this).html(words[(i = (i + 1) % words.length)]).fadeIn();
+          }); }, 2500)
+      })();
+    </script>
+</body>
+</html>

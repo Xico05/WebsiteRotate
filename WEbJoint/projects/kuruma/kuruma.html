@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mãos d'Aranha</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,maximum-scale=1.0,initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+    <link rel="icon" href="/D:\Desktop\WEbJoint\icon.svg">
+    <link rel="stylesheet" href="kstyle.css"/> 
+
+</head>
+<style>
+
+</style>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="70">
+    <div class="cursor"></div>
+    <nav class="navbar" id="navbar">
+        <div class="nav-links">
+            <a class="hoverunderline" href="/D:\Desktop\WEbJoint\projects.html">Go Back</a>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <section id="sec1" class="sec1">
+            <div class="intro hide">
+                <p>Kuruma</p>
+                <h5 class="hide" style="transition-delay: 100ms;">Branding, Logo Design...</h5>
+            </div>
+            <div class="date hide">
+                <h6>Ongoing</h6>
+            </div>
+        </section>
+        <section id="sec2" class="sec2">
+            <img src="Photos/1parallax.jpg" class="parallax">
+        </section>
+        <section id="sec3" class="sec3">
+            <div class="text">
+                <div class="left-text hide" style="transition-delay: 300ms;">
+                    <h2>Prologue</h2>
+                </div>
+                <div class="right-text hidden">
+                    <p>We had the pleasure to be responsible for this project, aimed at strengthening the brand image of the Portuguese surfskate manufacturer Bio Boards. The main objective was to make use of our experience and knowledge to deliver unique and efficient solutions to materialize the brand's vision. Here we'll go through all the specified areas we were assigned to develop.</p>
+                </div>
+            </div>
+        </section>
+        <section id="sec4" class="sec4">
+            <div class="sec4title hide">
+                <h2>Logo Design</h2>
+            </div>
+            <div class="items hide" style="transition-delay: 100ms;">
+                <div class="img">
+                    <img src="Designs/logo.jpg">
+                </div>
+            </div>
+        </section> 
+        <section id="sec5" class="sec5">
+            <div class="whole">
+                <div class="left-half hidden" style="top: 50%;">
+                    <p>This was a special and interesting aspect of the assignment. We produced a design that connoted a connection between the ground and the water, like surfskating, by drawing influence from the tail of the first ever amphibian known to man. The brand's history is embodied in the new logo, which also adds a contemporary design. The design incorporates three classic boards as the previous logo, which adds a familiar element and calls to mind the history of the company. Overall, the new design successfully conveys what Bio Boards is all about and how they relate to sports and the environment.</p>
+                </div>
+                <div class="right-half hide">
+                </div>
+            </div>
+        </section>
+        <section id="secsoon" class="secsoon">
+            <div class="soon hide">
+                <p>More will be coming, soon</p>
+            </div>
+        </section>
+    </div>
+    <script>
+        let mouseCursor = document.querySelector(".cursor");
+        let navLinks = document.querySelectorAll('.nav-links a, .more a, .footertxtl a, .col a, .img, .slider-button');
+
+        window.addEventListener('mousemove', cursor);
+
+        function cursor(e) {
+            mouseCursor.style.top = e.pageY + 'px';
+            mouseCursor.style.left = e.pageX + 'px';
+
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('mouseleave', () => {
+                mouseCursor.classList.remove('link-grow')
+            });
+            link.addEventListener('mouseover', () => {
+                mouseCursor.classList.add('link-grow')
+            });
+        });
+    </script>
+    <script src="/D:\Desktop\WEbJoint\scripts\anim.js">
+    </script>
+</body></html>

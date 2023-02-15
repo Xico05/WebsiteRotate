@@ -1,0 +1,959 @@
+@import url('https://fonts.googleapis.com/css?family=Space Grotesk');
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+
+html {
+    overflow: scroll;
+    width: 100%;
+    position: absolute;
+    overflow-x: hidden;
+    cursor: default;
+
+}
+
+body {
+    background-color: black;
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(8px);
+    transition: all 1s;
+    transform: translateX(-100%);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0px);
+    transition: 1s;
+    transform: translateX(0);
+}
+
+.hide {
+    opacity: 0;
+    filter: blur(8px);
+    transition: all 1s;
+}
+
+.reveal {
+    opacity: 1;
+    transition: 1s;
+    filter: blur(0px);
+}
+
+
+/*---------------------------------------ScrollBar---------------------------------*/
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F0f7ee;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+.navbar {
+    font-family: 'Space Grotesk';
+    width: 95vw;
+    position: fixed;
+    display: block;
+    text-decoration: none;
+    color: #f1f1f1;
+    mix-blend-mode: difference;
+    top: 15px;
+    height: 1vw;
+    transition: 2s;
+    z-index: 100;
+}
+
+.navbar a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 1.5vw;
+}
+
+.cursor {
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #f1f1f1;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.05s ease-in-out;
+    transform-origin: 100% 100%;
+    filter: blur(1.5px);
+    z-index: 5000;
+    top: -20%;
+    background-color: #f1f1f1;
+    mix-blend-mode: difference;
+}
+
+.link-grow {
+    scale: 500%;
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 0.05s ease-in-out;
+    filter: blur(1px);
+    transform: translate(30%, 30%);
+}
+
+.nav-link {
+    display: inline-block;
+    width: 6.5vw;
+}
+
+.nav-links:after {
+    content: '';
+    position: absolute;
+    width: 6.5vw;
+    transform: scaleX(0);
+    height: 2px;
+    left: 0.1vw;
+    border-radius: 5px;
+    bottom: -1.5vw;
+    background-color: #f1f1f1;
+    transform-origin: bottom right;
+    transition: transform 0.35s ease-in-out;
+}
+
+.nav-links:hover:after {
+    transform: scaleX(1);
+    transform-origin: top left;
+}
+
+.panel {
+    width: 90vw;
+    height: 100vw;
+}
+
+
+.wrapper {
+    display: grid;
+    height: 200%;
+    font-family: 'Manrope';
+    flex: none;
+    align-content: center;
+    justify-content: center;
+}
+
+.sec1 {
+    position: relative;
+    display: inline-block;
+    height: 90vh;
+    align-content: center;
+    justify-content: center;
+    transition: 2s;
+}
+
+.intro {
+    height: 100%;
+    position: relative;
+    align-content: center;
+    justify-content: center;
+}
+
+.intro p {
+    top: 15%;
+    position: relative;
+    color: #f1f1f1;
+    font-size: 17vw;
+    font-weight: 800;
+    text-align: center;
+}
+
+.intro h5 {
+    text-align: center;
+    color: #f1f1f1;
+    top: 15%;
+    font-size: 2vw;
+    position: relative;
+    float: none;
+    display: grid;
+    flex: none;
+}
+
+.date h6 {
+    width: 95vw;
+    text-align: right;
+    position: absolute;
+    color: #f1f1f1;
+    bottom: 1.5vw;
+    right: 3.5%;
+    font-size: 1.5vw;
+    font-weight: 100;
+    padding: 0px;
+    margin: 0px;
+    transition: 2s;
+}
+
+.parallax {
+    width: 100vw;
+    height: auto;
+}
+
+/*--------------------------------------------------------------------------------Prologue-------*/
+.sec3 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: 60vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    color: #f1f1f1;
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    width: 60vw;
+}
+
+.right-text {
+    font-family: 'Manrope';
+    position: relative;
+    height: auto;
+    width: 30vw;
+}
+
+.right-text p {
+    font-size: 1vw;
+}
+
+.left-text {
+    font-family: 'Space Grotesk';
+    position: relative;
+    width: 30vw;
+}
+
+.left-text h2 {
+    font-size: 2.5vw;
+}
+
+/*--------------------------------------------------------------------------------LogoDesign-------*/
+.sec4 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: 90vh;
+    font-family: 'Space Grotesk';
+    align-items: center;
+    justify-content: center;
+    color: #f1f1f1;
+}
+
+.sec4title {
+    position: absolute;
+    width: 90vw;
+    height: 6vh;
+    top: 1vw;
+}
+
+.sec4title h2 {
+    font-size: 1vw;
+}
+
+.items {
+    width: 90vw;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.items h3 {
+    top: 10px;
+    left: 12px;
+    mix-blend-mode: difference;
+    font-size: 1vw;
+}
+
+
+.img {
+    position: relative;
+}
+
+.img img {
+    width: 40vw;
+}
+
+.hover_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.img:hover .hover_img {
+    display: inline;
+}
+
+.sec5 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: 90vh;
+    font-family: 'Space Grotesk';
+    align-items: center;
+    justify-content: center;
+    color: #f1f1f1;
+}
+
+.whole {
+    color: #f1f1f1;
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    width: 60vw;
+}
+
+.right-half {
+    font-family: 'Manrope';
+    position: relative;
+    height: 50vh;
+    width: 25vw;
+
+    background-image: url(Designs/mockup1.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.left-half {
+    font-family: 'Space Grotesk';
+    position: relative;
+    width: 30vw;
+}
+
+.left-half p {
+    font-size: 1vw;
+    font-family: 'Manrope';
+}
+
+/*--------------------------------------------------------------------------------Photography-------*/
+
+.sec6 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: 90vh;
+    font-family: 'Space Grotesk';
+    align-items: center;
+    justify-content: center;
+    color: #f1f1f1;
+}
+
+.sec6title {
+    position: absolute;
+    width: 90vw;
+    height: 6vh;
+    top: 1vw;
+}
+
+.sec6title h2 {
+    font-size: 1vw;
+}
+
+.phototext {
+    width: 60vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.photoleft-text {
+    width: 30vw;
+    height: 30vw;
+}
+
+.photoright-text {
+    font-family: 'Manrope';
+    position: relative;
+    height: auto;
+    width: 30vw;
+}
+
+.photoright-text p {
+    font-size: 1vw;
+}
+
+.row {
+    position: absolute;
+    left: 0px;
+    width: 50vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 16vw;
+    height: 16vw;
+}
+
+.image1,
+.image2,
+.image3,
+.image4,
+.image5,
+.image6 {
+    width: 16vw;
+    height: 16vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0px;
+}
+
+.image1 {
+    background-image: url(Photos/1.jpg);
+}
+
+.image2 {
+    background-image: url(Photos/2.jpg);
+}
+
+.image3 {
+    background-image: url(Photos/3.jpg);
+}
+
+.image4 {
+    background-image: url(Photos/4.jpg);
+}
+
+.image5 {
+    background-image: url(Photos/5.jpg);
+}
+
+.image6 {
+    background-image: url(Photos/6.jpg);
+}
+
+/*--------------------------------------------------------------------------------3DRendering-------*/
+.sec7 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: 90vh;
+    font-family: 'Space Grotesk';
+    align-items: center;
+    justify-content: center;
+    color: #f1f1f1;
+}
+
+.sec7title {
+    position: absolute;
+    width: 90vw;
+    height: 6vh;
+    top: 1vw;
+}
+
+.sec7title h2 {
+    font-size: 1vw;
+}
+
+.banda {
+    top: 2vw;
+    position: relative;
+    --position: 50%;
+}
+
+.image-container {
+    width: 37vw;
+    height: 37vw;
+    aspect-ratio: 1/1;
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+.image-before {
+    position: absolute;
+    inset: 0;
+    width: var(--position);
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slider:focus-visible ~ .slider-button {
+    outline: 5px solid black;
+    outline-offset: 3px;
+}
+
+.slider-line {
+    position: absolute;
+    inset: 0;
+    width: .2rem;
+    height: 100%;
+    background-color: ;
+    /* z-index: 10; */
+    left: var(--position);
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.slider-button {
+    position: absolute;
+    color: black;
+    padding: .5rem;
+    border-radius: 100vw;
+    display: grid;
+    place-items: center;
+    top: 50%;
+    left: var(--position);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    /* z-index: 100; */
+    background: linear-gradient(145deg, #f1f1f1, #cacaca);
+    box-shadow: 4px 4px 12px #7d7d7d,
+}
+
+
+.sec8 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: 80vh;
+    font-family: 'Space Grotesk';
+    align-items: center;
+    justify-content: center;
+    color: #f1f1f1;
+}
+
+.renderleft-half {
+    font-family: 'Space Grotesk';
+    position: relative;
+    width: 30vw;
+    top: 50%;
+}
+
+.renderleft-half p {
+    font-size: 1vw;
+    font-family: 'Manrope';
+}
+
+.text3d {
+    color: #f1f1f1;
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    width: 60vw;
+}
+
+.render {
+    width: 25vw;
+    height: 25vw;
+    position: relative;
+    background-image: url(Designs/render.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/*--------------------------------------------------------------------------------Credits-------*/
+.sec9 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: 90vh;
+    font-family: 'Space Grotesk';
+    align-items: center;
+    justify-content: center;
+    color: #f1f1f1;
+}
+
+.sec9title {
+    position: absolute;
+    width: 90vw;
+    height: 6vh;
+    top: 1vw;
+}
+
+.sec9title h2 {
+    font-size: 1vw;
+}
+
+.credits {
+    width: 30vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". ."
+        ". ."
+        ". .";
+    justify-content: center;
+    align-content: center;
+}
+
+.credits p {
+    width: 100;
+    font-size: 1.5vw;
+}
+
+.areas p {
+    font-weight: 800;
+}
+
+.artist p {
+    text-align: right;
+    font-weight: 100;
+}
+
+/*--------------------------------------------------------------------------------Film Making-------*/
+.sec10,
+.sec11,
+.sec12 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: 60vh;
+    font-family: 'Space Grotesk';
+    align-items: center;
+    justify-content: center;
+    color: #f1f1f1;
+}
+
+.videoleft-text {
+    width: 39vw;
+    font-family: 'Manrope';
+    display: flex;
+    justify-content: flex-end;
+    transition-delay: 200ms;
+}
+
+.videoleft-text p {
+    width: 29vw;
+    font-size: 1vw;
+
+}
+
+.videos1 {
+    display: flex;
+    grid-gap: 2vw;
+
+}
+
+.videos2 {
+    display: flex;
+    grid-gap: 2vw;
+}
+
+.vid1 {
+    width: 39vw;
+    transition-delay: 200ms;
+}
+
+.vid2,
+.vid3 {
+    width: 39vw;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+    .cursor {
+        display: none;
+    }
+
+    .nav-links {
+        width: 23vh;
+    }
+
+    .nav-links a {
+        font-size: 3vh;
+    }
+
+    .sec1 {
+        height: 60vh;
+    }
+
+    .intro {
+        top: -18%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro h5 {
+        font-size: 2vh;
+        width: 90vw;
+    }
+
+    .date h6 {
+        font-size: 2vh;
+        right: 7vh;
+        bottom: 3vh;
+    }
+
+    .sec2 {
+        width: 100vw;
+    }
+
+    .parallax {
+        width: auto;
+        height: 35vh;
+    }
+
+    .sec3 {
+        height: 60vh;
+    }
+
+    .text {
+        display: inline-block;
+        width: 80vw;
+    }
+
+    .right-text {
+        width: 80vw;
+    }
+
+    .right-text p {
+        font-size: 4.6vw;
+    }
+
+    .left-text {
+        width: 30vw;
+    }
+
+    .left-text h2 {
+        font-size: 8.5vw;
+        font-weight: 800;
+    }
+
+    .sec4 {
+        height: 40vh;
+    }
+
+    .sec4 h2 {
+        font-size: 2.5vh;
+        font-weight: 800;
+    }
+
+    .items h3 {
+        font-size: 2vh;
+    }
+
+    .img img {
+        width: 80vw;
+    }
+
+    .sec5 {
+        height: 110vh;
+    }
+
+    .whole {
+        display: inline-block;
+        width: 80vw;
+    }
+
+    .left-half {
+        width: 80vw;
+    }
+
+    .left-half p {
+        font-size: 1.8vh;
+        width: 80vw;
+    }
+
+    .right-half {
+        top: 3vh;
+        width: 80vw;
+        height: 30v;
+    }
+
+    .sec6 {
+        height: 118vh;
+    }
+
+    .photo {
+        display: inline;
+        flex-wrap: wrap;
+    }
+
+    .phototext {
+        top: 2vh;
+        position: relative;
+        display: inline-block;
+        flex-wrap: nowrap;
+        width: 80vw;
+    }
+
+    .photoleft-text {
+        display: none;
+    }
+
+    .photoright-text {
+        width: 80vw;
+    }
+
+    .photoright-text p {
+        font-size: 1.8vh;
+    }
+
+    .sec6 h2 {
+        font-size: 2.5vh;
+        font-weight: 800;
+    }
+
+    .row {
+        position: relative;
+        width: 90vw;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .item {
+        width: 50vw;
+        height: 50vw;
+    }
+
+    .image1,
+    .image2,
+    .image3,
+    .image4,
+    .image5,
+    .image6 {
+        width: 50vw;
+        height: 50vw;
+        margin: 0px;
+    }
+
+
+
+    .sec7 {
+        height: 65vh
+    }
+
+    .sec7title h2 {
+        font-size: 2.5vh;
+        font-weight: 800;
+    }
+
+    .banda {
+        top: 5vh;
+    }
+
+    .image-container {
+        width: 120vw;
+        height: 120vw;
+    }
+
+    .sec8 {
+        height: 90vh;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .text3d {
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .renderleft-half {
+        width: 80vw;
+    }
+
+    .render {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .renderleft-half p {
+        font-size: 1.8vh;
+    }
+
+    .sec9 {
+        height: 30vh;
+    }
+
+    .sec9title h2 {
+        font-size: 2.5vh;
+        font-weight: 800;
+    }
+
+    .credits {
+        width: 60vw;
+    }
+
+    .credits p {
+        font-size: 4vw;
+    }
+
+
+    .videos1 {
+        flex-direction: column;
+    }
+
+    .videos2 {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    .sec10 {
+        height: 62vh;
+    }
+    
+    .sec11 {
+        height: 55vh;
+    }
+
+    .videoleft-text {
+        position: relative;
+        width: 80vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition-delay: 200ms;
+    }
+
+    .videoleft-text p {
+        width: 90vw;
+        font-size: 1.8vh;
+
+    }
+
+    .vid1,
+    .vid2,
+    .vid3 {
+        width: 90vw;
+    }
+}

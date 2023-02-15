@@ -1,0 +1,214 @@
+<html lang="en">
+
+<head>
+    <title>Mãos d'Aranha</title>
+    <link rel="icon" href="icon.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projectsstyle.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <canvas class="webgl"></canvas>
+    <script src="projects/Scripts/three.min.js"></script>
+    <script src="projects/Scripts/script.js"></script>
+    <div class="sidebar">
+        <h1>Projects Index</h1>
+        <a href="index.html">
+            <div class="logo">
+                <img src="logo.svg" alt="Logo">
+            </div>
+        </a>
+        <nav class="navbar">
+            <div class="nav-links collection-sort" id="myBtnContainer">
+                <div class="navitem">
+                    <a>
+                        <button class="btn active" onclick="filterSelection('all')">
+                            <p>All</p>
+                        </button>
+                    </a>
+                </div>
+                <div class="navitem">
+                    <a>
+                        <button class="btn" onclick="filterSelection('photography')">
+                            <p>Photography</p>
+                        </button>
+                    </a>
+                </div>
+                <div class="navitem">
+                    <a>
+                        <button class="btn" onclick="filterSelection('video')">
+                            <p>Film Making</p>
+                        </button>
+                    </a>
+                </div>
+                <div class="navitem">
+                    <a>
+                        <button class="btn" onclick="filterSelection('animation')">
+                            <p>Motion Graphics</p>
+                        </button>
+                    </a>
+                </div>
+                <div class="navitem">
+                    <a>
+                        <button class="btn" onclick="filterSelection('design')">
+                            <p>Design</p>
+                        </button>
+                    </a>
+                </div>
+                <div class="navitem">
+                    <a>
+                        <button class="btn" onclick="filterSelection('branding')">
+                            <p>Branding</p>
+                        </button>
+                    </a>
+                </div>
+                <div class="navitem">
+                    <a>
+                        <button class="btn" onclick="filterSelection('3drender')">
+                            <p>3D Randering</p>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </div>
+    <div class="col" style="float: right;">
+        <div class="frame frame1 hidden filterDiv photography video animation 3drender" data-speed="0.5">
+            <a href="projects/maran/maran.html">
+                <div class="card card1">
+                    <div class="desc">
+                        <h4>Maran</h4>
+                        <p>3D Rendering, Photography, Film Making, Motion Graphics</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="frame frame2 filterDiv branding design photography 3drender" data-speed="0.5">
+            <a href="projects/bioboards/bioboards.html">
+                <div class="card card2">
+                    <div class="desc">
+                        <h4>Bio Boards</h4>
+                        <p>Logo Design, Photography, 3D Rendering</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="frame frame3 hidden filterDiv branding design " data-speed="0.5">
+            <a href="projects/kuruma/kuruma.html"> 
+                <div class="card card3">
+                    <div class="desc">
+                        <h4>Kuruma</h4>
+                        <p>Logo Design</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="frame frame1 filterDiv branding design" data-speed="0.5">
+            <a href="bioboards.html">
+                <div class="card card4">
+                    <div class="desc">
+                        <h4>Ninho</h4> 
+                        <p>Logo Design</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="frame frame1 filterDiv " data-speed="0.5">
+            <a href="bioboards.html">
+                <div class="card card1">
+                    <div class="desc">
+                        <h4>Museu do Douro</h4>
+                        <p>Logo Design</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="frame frame1 filterDiv " data-speed="0.5">
+            <a href="bioboards.html">
+                <div class="card card1">
+                    <div class="desc">
+                        <h4>Maran</h4>
+                        <p>Photography, Film, Motion Graphics, 3D rendering</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col" style="float: right;">
+        <div class="frame frame1 filterDiv " data-speed="0.5">
+            <a href="bioboards.html">
+                <div class="card card1">
+                    <div class="desc">
+                        <h4>Maran</h4>
+                        <p>Photography, Film, Motion Graphics, 3D rendering</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="frame frame2 filterDiv " data-speed="0.5">
+            <a href="bioboards.html">
+                <div class="card card2">
+                    <div class="desc">
+                        <h4>Bio Boards</h4>
+                        <p>Photography, Branding, 3D rendering, Webdesign</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="frame frame3 filterDiv " data-speed="0.5">
+            <a href="bioboards.html">
+                <div class="card card3">
+                    <div class="desc">
+                        <h4>Kuruma</h4>
+                        <p>Photography, Branding, Asset Design, Webdesign</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col" style="float: right;">
+        <div class="frame frame1 filterDiv " data-speed="0.5">
+            <a href="bioboards.html">
+                <div class="card card1">
+                    <div class="desc">
+                        <h4>Maran</h4>
+                        <p>Photography, Film, Motion Graphics, 3D rendering</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="frame frame2 filterDiv " data-speed="0.5">
+            <a href="bioboards.html">
+                <div class="card card2">
+                    <div class="desc">
+                        <h4>Bio Boards</h4>
+                        <p>Photography, Branding, 3D rendering, Webdesign</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="frame frame3 filterDiv " data-speed="0.5">
+            <a href="bioboards.html">
+                <div class="card card3">
+                    <div class="desc">
+                        <h4>Kuruma</h4>
+                        <p>Photography, Branding, Asset Design, Webdesign</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="cursor"></div>
+    <script src="scripts/pindex.js">
+    </script>
+
+</body></html>

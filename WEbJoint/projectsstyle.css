@@ -1,0 +1,411 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: #f1f1f1;
+    cursor: default;
+}
+
+.sidebar {
+    width: 30vw;
+    background-color: white;
+    position: fixed;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    height: 100vh;
+}
+
+.sidebar h1 {
+    font-size: 5vw;
+    font-family: 'Space Grotesk';
+    top: 8vh;
+    left: 2vw;
+    position: relative;
+}
+
+.logo {
+    position: fixed;
+    left: 2vw;
+    top: 1vh;
+}
+
+.logo img {
+     -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+          filter: invert(100%);
+    height: 40px;
+}
+
+.navbar {
+    display: flex;
+    align-content: center;
+    height: 100%;
+    position: relative;
+    top: 13vh;
+    left: 2vw;
+}
+
+
+.btn {
+    justify-content: center;
+    text-align: left;
+    margin-top: 1vw;
+    position: relative;
+    width: 10vw;
+    height: 3vw;
+    text-decoration: none;
+    color: black;
+    font-family: 'Space Grotesk';
+    cursor: pointer;
+    border: none;
+    border-radius: 1vw;
+    background: #ffffff;
+    box-shadow: -10px 10px 30px #bebebe,
+        10px -10px 30px #ffffff;
+}
+
+.btn p {
+    margin-left: 10%;
+    font-size: 1vw;
+}
+
+.btn.active {
+    background: #ffffff;
+    box-shadow: inset -5px 5px 15px #bebebe,
+        inset 5px -5px 15px #ffffff;
+}
+
+.col {
+    position: relative;
+    width: 70vw;
+    right: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col a {
+    text-decoration: none;
+}
+
+.frame {
+    margin-left: 4vw;
+    margin-right: 4vw;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+    display: inline-block;
+}
+
+.card {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    position: relative;
+    place-content: center;
+    font-family: 'Space Grotesk';
+    width: 15vw;
+    height: 50vh;
+    display: inline-block;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    color: #f1f1f1;
+}
+
+.card1 {
+    background-image: url(images/maran.jpg); 
+}
+
+.card2 {
+    background-image: url(images/bioboards.jpg);
+}
+
+.card3 {
+    background-image: url(images/kuruma.jpg);
+}
+
+.card4 {
+    background-image: url(images/ninho.jpg);
+}
+
+.desc {
+    top: 88%;
+    position: absolute;
+    width: 90%;
+}
+
+.desc h4 {
+    bottom: 110%;
+    position: absolute;
+    left: 5%;
+}
+
+.desc p {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    font-size: 0.78vw;
+}
+
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 5px auto;
+    border-radius: 20px;
+    -webkit-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+
+}
+
+.filterDiv {
+    display: none;
+    flex-direction: column;
+    flex: 1 16%;
+    padding: 0;
+}
+
+.show {
+    display: block;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F0f7ee;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+.section {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+section:nth-child(odd) {
+    justify-content: flex-end;
+}
+
+.cursor {
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #f1f1f1;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.05s ease-in-out;
+    transform-origin: 100% 100%;
+    filter: blur(1.5px);
+    z-index: 5000;
+    top: -20%;
+    background-color: #f1f1f1;
+    mix-blend-mode: difference;
+}
+
+.link-grow {
+    scale: 400%;
+
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 0.05s ease-in-out;
+    filter: blur(1px);
+    transform: translate(30%, 30%);
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    html {
+        width: 100vw;
+        overflow-x: hidden;
+
+    }
+
+    body {
+        width: 100vw;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0px;
+        border border-radius:
+    }
+
+    .sidebar {
+        z-index: 1;
+        width: 100vw;
+        height: 8vh;
+        background-color: white;
+        position: fixed;
+        box-shadow: inset -10px -10px 30px #bebebe,
+            inset 10px 10px 30px #ffffff;
+
+    }
+
+    .sidebar h1 {
+        font-size: 5vw;
+        font-family: 'Space Grotesk';
+        top: 2.5vh;
+        float: right;
+        left: -20px;
+    }
+
+    .nav-links {
+        padding-top: 20vh;
+        position: fixed;
+        left: -110%;
+        top: 8vh;
+        flex-direction: column;
+        width: 100vw;
+        background: rgba(255, 255, 255, 0.26);
+        backdrop-filter: blur(7.4px);
+        -webkit-backdrop-filter: blur(7.4px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        height: 92vh;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .navbar a {
+        font-weight: 900;
+        margin: 2.5rem 0;
+        font-size: 7vw;
+        bottom: 0px;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        bottom: 20px;
+        position: fixed;
+        right: 30px;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+        transition-duration: 0s;
+        background-color: black;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        background-color: black;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-12px) rotate(-45deg);
+        background-color: black;
+    }
+
+    .col {
+        position: relative;
+        width: 100vw;
+        right: 3%;
+        top: 7vh;
+        display: flex;
+        flex-wrap: wrap;
+        float: none;
+    }
+
+    .cursor {
+        display: none;
+    }
+
+    .btn {
+        margin-top: 6vw;
+        position: relative;
+        width: 20vh;
+        height: 5vh;
+        border-radius: 2vh;
+        background: #ffffff;
+        box-shadow: -10px 10px 30px #bebebe,
+            10px -10px 30px #ffffff;
+    }
+
+    .btn p {
+        margin-left: 10%;
+        font-size: 4vw;
+    }
+
+    .btn.active {
+        background: #ffffff;
+        box-shadow: inset -5px 5px 15px #bebebe,
+            inset 5px -5px 15px #ffffff;
+    }
+
+    .frame {
+        margin-top: 6vh;
+        margin-bottom: 0vh;
+    }
+
+    .card {
+        box-shadow: -10px -10px 30px #bebebe,
+            10px 10px 30px #ffffff;
+        width: 35vw;
+        height: 30vh;
+        margin-left: 25px;
+    }
+
+
+
+    .desc {
+        top: 80%;
+        width: 90%;
+
+    }
+
+    .desc h4 {
+        bottom: 110%;
+        position: absolute;
+        left: 5%;
+    }
+
+    .desc p {
+        left: 10%;
+        width: 100%;
+        font-size: 10px;
+        right: 10%;
+        height: 100%;
+    }
+
+    .logo {
+        position: fixed;
+        left: 4vw;
+        top: 2vh;
+    }
+
+    .logo img {
+        height: 27px;
+    }
+
+
+
+}
